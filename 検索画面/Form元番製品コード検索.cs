@@ -33,6 +33,8 @@ namespace CCJ_QAQC
 
         private void Form元番製品コード検索_Load(object sender, EventArgs e)
         {
+            // TODO: このコード行はデータを 'dataSet元番材料コード.処方箋' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.処方箋TableAdapter.Fill(this.dataSet元番材料コード.処方箋);
             // TODO: このコード行はデータを '元番製品コード.処方箋' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             //this.処方箋TableAdapter.Fill(this.元番製品コード.処方箋);
             // TODO: このコード行はデータを '元番製品コード.開発処方箋台帳' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
@@ -49,32 +51,26 @@ namespace CCJ_QAQC
             
             if (!string.IsNullOrWhiteSpace(this.textBox製品コード.Text) && !string.IsNullOrWhiteSpace(this.textBox元番.Text))
             {
-                if (this.radioButton開発処方箋台帳を検索.Checked)
-                {
-                    MessageBox.Show("元番と製品コードを同時に設定した場合は、開発処方箋台帳を検索対象にはできません。", Properties.Settings.Default.ApplicationName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.radioButton処方箋台帳を検索.Checked = true;
-                }
                 this.dataGridView1.DataSource = this.処方箋BindingSource;
                 //this.処方箋TableAdapter.FillBy製品コードと元番(this.元番製品コード.処方箋, this.textBox製品コード.Text, this.textBox元番.Text);
             }
             else if (!string.IsNullOrWhiteSpace(this.textBox製品コード.Text) && string.IsNullOrWhiteSpace(this.textBox元番.Text))
             {
                 this.dataGridView1.DataSource = this.処方箋BindingSource;
-                //this.処方箋TableAdapter.FillBy製品コード(this.元番製品コード.処方箋, this.textBox製品コード.Text);//.Fill(this.元番製品コード.顧客サンプル台帳);
             }
             else if(string.IsNullOrWhiteSpace(this.textBox製品コード.Text) && !string.IsNullOrWhiteSpace(this.textBox元番.Text))
             {
-                //元番で検索するので、どちらのDBを使うか？
-                if (this.radioButton処方箋台帳を検索.Checked)
-                {
-                    this.dataGridView1.DataSource = this.処方箋BindingSource;
-                    //this.処方箋TableAdapter.FillBy元番(this.元番製品コード.処方箋, this.textBox元番.Text);
-                }
-                else if (this.radioButton開発処方箋台帳を検索.Checked)
-                {
-                    this.dataGridView1.DataSource = this.開発処方箋台帳BindingSource;
-                    //this.開発処方箋台帳TableAdapter.FillBy処方番号(this.元番製品コード.開発処方箋台帳, this.textBox元番.Text);
-                }
+                ////元番で検索するので、どちらのDBを使うか？
+                //if (this.radioButton処方箋台帳を検索.Checked)
+                //{
+                //    this.dataGridView1.DataSource = this.処方箋BindingSource;
+                //    //this.処方箋TableAdapter.FillBy元番(this.元番製品コード.処方箋, this.textBox元番.Text);
+                //}
+                //else if (this.radioButton開発処方箋台帳を検索.Checked)
+                //{
+                //    this.dataGridView1.DataSource = this.開発処方箋台帳BindingSource;
+                //    //this.開発処方箋台帳TableAdapter.FillBy処方番号(this.元番製品コード.開発処方箋台帳, this.textBox元番.Text);
+                //}
             }
             else
             {
@@ -84,19 +80,11 @@ namespace CCJ_QAQC
 
         private void dataGridView1_DataSourceChanged(object sender, EventArgs e)
         {
-            if (this.dataGridView1.DataSource == this.処方箋BindingSource)
-            {
-                this.dataGridView1.Columns[0].Width = 100;
-                this.dataGridView1.Columns[0].HeaderText = "製品コード";
-                this.dataGridView1.Columns[1].Width = 100;
-                this.dataGridView1.Columns[2].Width = 300;
-                this.dataGridView1.Columns[3].Width = 200;
-            }
-            else if (this.dataGridView1.DataSource == this.開発処方箋台帳BindingSource)
-            {
-                this.dataGridView1.Columns[0].Width = 100;
-                this.dataGridView1.Columns[1].Width = 300;
-            }
+            this.dataGridView1.Columns[0].Width = 100;
+            this.dataGridView1.Columns[0].HeaderText = "製品コード";
+            this.dataGridView1.Columns[1].Width = 100;
+            this.dataGridView1.Columns[2].Width = 300;
+
         }
 
         private void textBox_KeyUp(object sender, KeyEventArgs e)

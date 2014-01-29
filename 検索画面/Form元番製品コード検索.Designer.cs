@@ -35,21 +35,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox元番 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton処方箋台帳を検索 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton開発処方箋台帳を検索 = new System.Windows.Forms.RadioButton();
-            //this.元番製品コード = new CCJ_QAQC.元番製品コード();
-            this.開発処方箋台帳BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.開発処方箋台帳TableAdapter = new CCJ_QAQC.元番製品コードTableAdapters.開発処方箋台帳TableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonClear = new System.Windows.Forms.Button();
             this.処方箋BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.処方箋TableAdapter = new CCJ_QAQC.元番製品コードTableAdapters.処方箋TableAdapter();
-            this.groupBox1.SuspendLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.元番製品コード)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.開発処方箋台帳BindingSource)).BeginInit();
+            this.dataSet元番材料コード = new CCJ_QAQC.DataSet元番材料コード();
+            this.処方箋TableAdapter = new CCJ_QAQC.DataSet元番材料コードTableAdapters.処方箋TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.処方箋BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet元番材料コード)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCloseForm
@@ -111,52 +104,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "元番";
             // 
-            // radioButton処方箋台帳を検索
-            // 
-            this.radioButton処方箋台帳を検索.AutoSize = true;
-            this.radioButton処方箋台帳を検索.Checked = true;
-            this.radioButton処方箋台帳を検索.Location = new System.Drawing.Point(15, 16);
-            this.radioButton処方箋台帳を検索.Name = "radioButton処方箋台帳を検索";
-            this.radioButton処方箋台帳を検索.Size = new System.Drawing.Size(122, 22);
-            this.radioButton処方箋台帳を検索.TabIndex = 10;
-            this.radioButton処方箋台帳を検索.TabStop = true;
-            this.radioButton処方箋台帳を検索.Text = "処方箋台帳を検索";
-            this.radioButton処方箋台帳を検索.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton開発処方箋台帳を検索);
-            this.groupBox1.Controls.Add(this.radioButton処方箋台帳を検索);
-            this.groupBox1.Location = new System.Drawing.Point(248, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(183, 75);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            // 
-            // radioButton開発処方箋台帳を検索
-            // 
-            this.radioButton開発処方箋台帳を検索.AutoSize = true;
-            this.radioButton開発処方箋台帳を検索.Location = new System.Drawing.Point(15, 41);
-            this.radioButton開発処方箋台帳を検索.Name = "radioButton開発処方箋台帳を検索";
-            this.radioButton開発処方箋台帳を検索.Size = new System.Drawing.Size(146, 22);
-            this.radioButton開発処方箋台帳を検索.TabIndex = 10;
-            this.radioButton開発処方箋台帳を検索.Text = "開発処方箋台帳を検索";
-            this.radioButton開発処方箋台帳を検索.UseVisualStyleBackColor = true;
-            //// 
-            //// 元番製品コード
-            //// 
-            //this.元番製品コード.DataSetName = "元番製品コード";
-            //this.元番製品コード.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            //// 
-            //// 開発処方箋台帳BindingSource
-            //// 
-            //this.開発処方箋台帳BindingSource.DataMember = "開発処方箋台帳";
-            //this.開発処方箋台帳BindingSource.DataSource = this.元番製品コード;
-            //// 
-            //// 開発処方箋台帳TableAdapter
-            //// 
-            //this.開発処方箋台帳TableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -184,15 +131,20 @@
             this.buttonClear.Text = "検索条件クリア";
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
-            //// 
-            //// 処方箋BindingSource
-            //// 
-            //this.処方箋BindingSource.DataMember = "処方箋";
-            //this.処方箋BindingSource.DataSource = this.元番製品コード;
-            //// 
-            //// 処方箋TableAdapter
-            //// 
-            //this.処方箋TableAdapter.ClearBeforeFill = true;
+            // 
+            // 処方箋BindingSource
+            // 
+            this.処方箋BindingSource.DataMember = "処方箋";
+            this.処方箋BindingSource.DataSource = this.dataSet元番材料コード;
+            // 
+            // dataSet元番材料コード
+            // 
+            this.dataSet元番材料コード.DataSetName = "DataSet元番材料コード";
+            this.dataSet元番材料コード.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // 処方箋TableAdapter
+            // 
+            this.処方箋TableAdapter.ClearBeforeFill = true;
             // 
             // Form元番製品コード検索
             // 
@@ -201,7 +153,6 @@
             this.ClientSize = new System.Drawing.Size(884, 662);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSearch);
@@ -218,15 +169,11 @@
             this.Controls.SetChildIndex(this.buttonSearch, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.buttonClear, 0);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.元番製品コード)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.開発処方箋台帳BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.処方箋BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet元番材料コード)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,16 +186,14 @@
         private System.Windows.Forms.TextBox textBox製品コード;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource 開発処方箋台帳BindingSource;
         //private 元番製品コードTableAdapters.開発処方箋台帳TableAdapter 開発処方箋台帳TableAdapter;
         private System.Windows.Forms.TextBox textBox元番;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton処方箋台帳を検索;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton開発処方箋台帳を検索;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.BindingSource 処方箋BindingSource;
+        private DataSet元番材料コード dataSet元番材料コード;
+        private DataSet元番材料コードTableAdapters.処方箋TableAdapter 処方箋TableAdapter;
         //private 元番製品コードTableAdapters.処方箋TableAdapter 処方箋TableAdapter;
 
     }

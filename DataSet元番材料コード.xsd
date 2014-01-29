@@ -27,6 +27,25 @@ FROM              材料マスタ INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="処方箋TableAdapter" GeneratorDataComponentClassName="処方箋TableAdapter" Name="処方箋" UserDataComponentName="処方箋TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CCJQAQCConnectionString (Settings)" DbObjectName="CCJ2.dbo.処方箋" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT            製品管理番号, 処方箋番号, 製品名
+FROM              処方箋</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="製品管理番号" DataSetColumn="製品管理番号" />
+              <Mapping SourceColumn="処方箋番号" DataSetColumn="処方箋番号" />
+              <Mapping SourceColumn="製品名" DataSetColumn="製品名" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -56,6 +75,33 @@ FROM              材料マスタ INNER JOIN
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="処方箋" msprop:Generator_TableClassName="処方箋DataTable" msprop:Generator_TableVarName="table処方箋" msprop:Generator_TablePropName="処方箋" msprop:Generator_RowDeletingName="処方箋RowDeleting" msprop:Generator_RowChangingName="処方箋RowChanging" msprop:Generator_RowEvHandlerName="処方箋RowChangeEventHandler" msprop:Generator_RowDeletedName="処方箋RowDeleted" msprop:Generator_UserTableName="処方箋" msprop:Generator_RowChangedName="処方箋RowChanged" msprop:Generator_RowEvArgName="処方箋RowChangeEvent" msprop:Generator_RowClassName="処方箋Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="製品管理番号" msprop:Generator_ColumnVarNameInTable="column製品管理番号" msprop:Generator_ColumnPropNameInRow="製品管理番号" msprop:Generator_ColumnPropNameInTable="製品管理番号Column" msprop:Generator_UserColumnName="製品管理番号" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="処方箋番号" msprop:Generator_ColumnVarNameInTable="column処方箋番号" msprop:Generator_ColumnPropNameInRow="処方箋番号" msprop:Generator_ColumnPropNameInTable="処方箋番号Column" msprop:Generator_UserColumnName="処方箋番号" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="製品名" msprop:Generator_ColumnVarNameInTable="column製品名" msprop:Generator_ColumnPropNameInRow="製品名" msprop:Generator_ColumnPropNameInTable="製品名Column" msprop:Generator_UserColumnName="製品名" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
