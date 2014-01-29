@@ -56,17 +56,7 @@ namespace CCJ_QAQC
             }
             else if(string.IsNullOrWhiteSpace(this.textBox製品コード.Text) && !string.IsNullOrWhiteSpace(this.textBox元番.Text))
             {
-                ////元番で検索するので、どちらのDBを使うか？
-                //if (this.radioButton処方箋台帳を検索.Checked)
-                //{
-                //    this.dataGridView1.DataSource = this.処方箋BindingSource;
-                //    //this.処方箋TableAdapter.FillBy元番(this.元番製品コード.処方箋, this.textBox元番.Text);
-                //}
-                //else if (this.radioButton開発処方箋台帳を検索.Checked)
-                //{
-                //    this.dataGridView1.DataSource = this.開発処方箋台帳BindingSource;
-                //    //this.開発処方箋台帳TableAdapter.FillBy処方番号(this.元番製品コード.開発処方箋台帳, this.textBox元番.Text);
-                //}
+                this.処方箋TableAdapter.FillBy元番(this.dataSet元番材料コード.処方箋, this.textBox元番.Text);
             }
             else
             {
