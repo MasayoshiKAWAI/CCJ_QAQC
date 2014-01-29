@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{42BE57A4-6B25-4933-8A84-0701C45B7622}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>CCJ品証品管</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>CCJ_QAQC</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CCJ_QAQC.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Win.C1FlexGrid.4, Version=4.6.20123.745, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Kawai.ApplicationBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Kawai\KawaiApplicationBase\bin\Release\Kawai.ApplicationBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Kawai.Tools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Kawai\KawaiTools\bin\Release\Kawai.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="MILK_原料検査ワークシート.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MILK_原料検査ワークシート.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CCJ2DataSetHP8100.xsc">
+      <DependentUpon>CCJ2DataSetHP8100.xsd</DependentUpon>
+    </None>
+    <None Include="CCJ2DataSetHP8100.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CCJ2DataSetHP8100.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CCJ2DataSetHP8100.xss">
+      <DependentUpon>CCJ2DataSetHP8100.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet検査ワークシート.xsc">
+      <DependentUpon>DataSet検査ワークシート.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet検査ワークシート.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet検査ワークシート.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet検査ワークシート.xss">
+      <DependentUpon>DataSet検査ワークシート.xsd</DependentUpon>
+    </None>
+    <None Include="MILK_原料検査ワークシート.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MILK_原料検査ワークシート.edmx</DependentUpon>
+      <LastGenOutput>MILK_原料検査ワークシート.Context.cs</LastGenOutput>
+    </None>
+    <None Include="MILK_原料検査ワークシート.edmx.diagram">
+      <DependentUpon>MILK_原料検査ワークシート.edmx</DependentUpon>
+    </None>
+    <None Include="MILK_原料検査ワークシート.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MILK_原料検査ワークシート.edmx</DependentUpon>
+      <LastGenOutput>MILK_原料検査ワークシート.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\原料検査ワークシート.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="元番製品コード.xsc">
+      <DependentUpon>元番製品コード.xsd</DependentUpon>
+    </None>
+    <None Include="元番製品コード.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>元番製品コード.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="元番製品コード.xss">
+      <DependentUpon>元番製品コード.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCJ2DataSetHP8100.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCJ2DataSetHP8100.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet検査ワークシート.cs">
+      <DependentUpon>DataSet検査ワークシート.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet検査ワークシート.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet検査ワークシート.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MILK_原料検査ワークシート.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MILK_原料検査ワークシート.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MILK_原料検査ワークシート.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MILK_原料検査ワークシート.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MILK_原料検査ワークシート.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MILK_原料検査ワークシート.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="原料検査ワークシート.cs">
+      <DependentUpon>MILK_原料検査ワークシート.tt</DependentUpon>
+    </Compile>
+    <Compile Include="検査ワークシート.cs" />
+    <Compile Include="検索画面\Form原料コード検索.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="検索画面\Form原料コード検索.Designer.cs">
+      <DependentUpon>Form原料コード検索.cs</DependentUpon>
+    </Compile>
+    <Compile Include="原料検査ワークシート\Form原料検査WS詳細.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="原料検査ワークシート\Form原料検査WS詳細.Designer.cs">
+      <DependentUpon>Form原料検査WS詳細.cs</DependentUpon>
+    </Compile>
+    <Compile Include="原料検査ワークシート\Form原料検査ワークシートテーブル.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="原料検査ワークシート\Form原料検査ワークシートテーブル.Designer.cs">
+      <DependentUpon>Form原料検査ワークシートテーブル.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="原料検査ワークシート\FormReadCSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="原料検査ワークシート\FormReadCSV.Designer.cs">
+      <DependentUpon>FormReadCSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="元番製品コード.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>元番製品コード.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="原料検査ワークシート\Form原料検査WS検索.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="原料検査ワークシート\Form原料検査WS検索.Designer.cs">
+      <DependentUpon>Form原料検査WS検索.cs</DependentUpon>
+    </Compile>
+    <Compile Include="原料検査ワークシート\Form11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="原料検査ワークシート\Form11.Designer.cs">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="検索画面\Form元番製品コード検索.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="検索画面\Form元番製品コード検索.Designer.cs">
+      <DependentUpon>Form元番製品コード検索.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form21.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form21.Designer.cs">
+      <DependentUpon>Form21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="検索画面\Form原料コード検索.resx">
+      <DependentUpon>Form原料コード検索.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="原料検査ワークシート\FormReadCSV.resx">
+      <DependentUpon>FormReadCSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="原料検査ワークシート\Form原料検査WS詳細.resx">
+      <DependentUpon>Form原料検査WS詳細.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="原料検査ワークシート\Form原料検査ワークシートテーブル.resx">
+      <DependentUpon>Form原料検査ワークシートテーブル.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="原料検査ワークシート\Form原料検査WS検索.resx">
+      <DependentUpon>Form原料検査WS検索.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="原料検査ワークシート\Form11.resx">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="検索画面\Form元番製品コード検索.resx">
+      <DependentUpon>Form元番製品コード検索.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\titleimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 4.5
+</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

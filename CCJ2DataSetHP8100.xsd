@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CCJ2DataSetHP8100" targetNamespace="http://tempuri.org/CCJ2DataSetHP8100.xsd" xmlns:mstns="http://tempuri.org/CCJ2DataSetHP8100.xsd" xmlns="http://tempuri.org/CCJ2DataSetHP8100.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionStringHP8100" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionStringHP8100 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CCJ_QAQC.Properties.Settings.GlobalReference.Default.ConnectionStringHP8100" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="M_ユーザーTableAdapter" GeneratorDataComponentClassName="M_ユーザーTableAdapter" Name="M_ユーザー" UserDataComponentName="M_ユーザーTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionStringHP8100 (Settings)" DbObjectName="CCJ2.dbo.M_ユーザー" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ユーザーコード, 名称, 郵便番号, 住所１, 住所２, 担当者, 電話番号, ＦＡＸ番号, 送付先名称, 送付先郵便番号, 送付先住所１, 送付先住所２, 送付先担当者, 送付先電話番号, 削除フラグ, 登録日, 登録ID, 更新日, 更新ID, 表示順 FROM dbo.M_ユーザー</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ユーザーコード" DataSetColumn="ユーザーコード" />
+              <Mapping SourceColumn="名称" DataSetColumn="名称" />
+              <Mapping SourceColumn="郵便番号" DataSetColumn="郵便番号" />
+              <Mapping SourceColumn="住所１" DataSetColumn="住所１" />
+              <Mapping SourceColumn="住所２" DataSetColumn="住所２" />
+              <Mapping SourceColumn="担当者" DataSetColumn="担当者" />
+              <Mapping SourceColumn="電話番号" DataSetColumn="電話番号" />
+              <Mapping SourceColumn="ＦＡＸ番号" DataSetColumn="ＦＡＸ番号" />
+              <Mapping SourceColumn="送付先名称" DataSetColumn="送付先名称" />
+              <Mapping SourceColumn="送付先郵便番号" DataSetColumn="送付先郵便番号" />
+              <Mapping SourceColumn="送付先住所１" DataSetColumn="送付先住所１" />
+              <Mapping SourceColumn="送付先住所２" DataSetColumn="送付先住所２" />
+              <Mapping SourceColumn="送付先担当者" DataSetColumn="送付先担当者" />
+              <Mapping SourceColumn="送付先電話番号" DataSetColumn="送付先電話番号" />
+              <Mapping SourceColumn="削除フラグ" DataSetColumn="削除フラグ" />
+              <Mapping SourceColumn="登録日" DataSetColumn="登録日" />
+              <Mapping SourceColumn="登録ID" DataSetColumn="登録ID" />
+              <Mapping SourceColumn="更新日" DataSetColumn="更新日" />
+              <Mapping SourceColumn="更新ID" DataSetColumn="更新ID" />
+              <Mapping SourceColumn="表示順" DataSetColumn="表示順" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CCJ2DataSetHP8100" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CCJ2DataSetHP8100" msprop:Generator_UserDSName="CCJ2DataSetHP8100">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="M_ユーザー" msprop:Generator_TableClassName="M_ユーザーDataTable" msprop:Generator_TableVarName="tableM_ユーザー" msprop:Generator_RowChangedName="M_ユーザーRowChanged" msprop:Generator_TablePropName="M_ユーザー" msprop:Generator_RowDeletingName="M_ユーザーRowDeleting" msprop:Generator_RowChangingName="M_ユーザーRowChanging" msprop:Generator_RowEvHandlerName="M_ユーザーRowChangeEventHandler" msprop:Generator_RowDeletedName="M_ユーザーRowDeleted" msprop:Generator_RowClassName="M_ユーザーRow" msprop:Generator_UserTableName="M_ユーザー" msprop:Generator_RowEvArgName="M_ユーザーRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ユーザーコード" msprop:Generator_ColumnVarNameInTable="columnユーザーコード" msprop:Generator_ColumnPropNameInRow="ユーザーコード" msprop:Generator_ColumnPropNameInTable="ユーザーコードColumn" msprop:Generator_UserColumnName="ユーザーコード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="名称" msprop:Generator_ColumnVarNameInTable="column名称" msprop:Generator_ColumnPropNameInRow="名称" msprop:Generator_ColumnPropNameInTable="名称Column" msprop:Generator_UserColumnName="名称" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="郵便番号" msprop:Generator_ColumnVarNameInTable="column郵便番号" msprop:Generator_ColumnPropNameInRow="郵便番号" msprop:Generator_ColumnPropNameInTable="郵便番号Column" msprop:Generator_UserColumnName="郵便番号" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="住所_xFF11_" msprop:Generator_ColumnVarNameInTable="column住所１" msprop:Generator_ColumnPropNameInRow="住所１" msprop:Generator_ColumnPropNameInTable="住所１Column" msprop:Generator_UserColumnName="住所１" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="住所_xFF12_" msprop:Generator_ColumnVarNameInTable="column住所２" msprop:Generator_ColumnPropNameInRow="住所２" msprop:Generator_ColumnPropNameInTable="住所２Column" msprop:Generator_UserColumnName="住所２" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="担当者" msprop:Generator_ColumnVarNameInTable="column担当者" msprop:Generator_ColumnPropNameInRow="担当者" msprop:Generator_ColumnPropNameInTable="担当者Column" msprop:Generator_UserColumnName="担当者" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="電話番号" msprop:Generator_ColumnVarNameInTable="column電話番号" msprop:Generator_ColumnPropNameInRow="電話番号" msprop:Generator_ColumnPropNameInTable="電話番号Column" msprop:Generator_UserColumnName="電話番号" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_xFF26__xFF21__xFF38_番号" msprop:Generator_ColumnVarNameInTable="columnＦＡＸ番号" msprop:Generator_ColumnPropNameInRow="ＦＡＸ番号" msprop:Generator_ColumnPropNameInTable="ＦＡＸ番号Column" msprop:Generator_UserColumnName="ＦＡＸ番号" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="送付先名称" msprop:Generator_ColumnVarNameInTable="column送付先名称" msprop:Generator_ColumnPropNameInRow="送付先名称" msprop:Generator_ColumnPropNameInTable="送付先名称Column" msprop:Generator_UserColumnName="送付先名称" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="送付先郵便番号" msprop:Generator_ColumnVarNameInTable="column送付先郵便番号" msprop:Generator_ColumnPropNameInRow="送付先郵便番号" msprop:Generator_ColumnPropNameInTable="送付先郵便番号Column" msprop:Generator_UserColumnName="送付先郵便番号" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="送付先住所_xFF11_" msprop:Generator_ColumnVarNameInTable="column送付先住所１" msprop:Generator_ColumnPropNameInRow="送付先住所１" msprop:Generator_ColumnPropNameInTable="送付先住所１Column" msprop:Generator_UserColumnName="送付先住所１" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="送付先住所_xFF12_" msprop:Generator_ColumnVarNameInTable="column送付先住所２" msprop:Generator_ColumnPropNameInRow="送付先住所２" msprop:Generator_ColumnPropNameInTable="送付先住所２Column" msprop:Generator_UserColumnName="送付先住所２" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="送付先担当者" msprop:Generator_ColumnVarNameInTable="column送付先担当者" msprop:Generator_ColumnPropNameInRow="送付先担当者" msprop:Generator_ColumnPropNameInTable="送付先担当者Column" msprop:Generator_UserColumnName="送付先担当者" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="送付先電話番号" msprop:Generator_ColumnVarNameInTable="column送付先電話番号" msprop:Generator_ColumnPropNameInRow="送付先電話番号" msprop:Generator_ColumnPropNameInTable="送付先電話番号Column" msprop:Generator_UserColumnName="送付先電話番号" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="削除フラグ" msprop:Generator_ColumnVarNameInTable="column削除フラグ" msprop:Generator_ColumnPropNameInRow="削除フラグ" msprop:Generator_ColumnPropNameInTable="削除フラグColumn" msprop:Generator_UserColumnName="削除フラグ">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="登録日" msprop:Generator_ColumnVarNameInTable="column登録日" msprop:Generator_ColumnPropNameInRow="登録日" msprop:Generator_ColumnPropNameInTable="登録日Column" msprop:Generator_UserColumnName="登録日" type="xs:dateTime" />
+              <xs:element name="登録ID" msprop:Generator_ColumnVarNameInTable="column登録ID" msprop:Generator_ColumnPropNameInRow="登録ID" msprop:Generator_ColumnPropNameInTable="登録IDColumn" msprop:Generator_UserColumnName="登録ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="更新日" msprop:Generator_ColumnVarNameInTable="column更新日" msprop:Generator_ColumnPropNameInRow="更新日" msprop:Generator_ColumnPropNameInTable="更新日Column" msprop:Generator_UserColumnName="更新日" type="xs:dateTime" />
+              <xs:element name="更新ID" msprop:Generator_ColumnVarNameInTable="column更新ID" msprop:Generator_ColumnPropNameInRow="更新ID" msprop:Generator_ColumnPropNameInTable="更新IDColumn" msprop:Generator_UserColumnName="更新ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="表示順" msprop:Generator_ColumnVarNameInTable="column表示順" msprop:Generator_ColumnPropNameInRow="表示順" msprop:Generator_ColumnPropNameInTable="表示順Column" msprop:Generator_UserColumnName="表示順" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:M_ユーザー" />
+      <xs:field xpath="mstns:ユーザーコード" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
