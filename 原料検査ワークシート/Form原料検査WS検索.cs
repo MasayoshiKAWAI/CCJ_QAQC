@@ -40,7 +40,7 @@ namespace CCJ_QAQC
             // TODO: このコード行はデータを 'dataSet検査ワークシート.原料検査ワークシート' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.原料検査ワークシートTableAdapter.Fill(this.dataSet検査ワークシート.原料検査ワークシート);
             // TODO: このコード行はデータを '元番製品コード.材料マスタ' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.材料マスタTableAdapter.FillBy材料コード(this.元番製品コード.材料マスタ, this.原料コード);
+            //this.材料マスタTableAdapter.FillBy材料コード(this.元番製品コード.材料マスタ, this.原料コード);
             //this.原料検査ワークシートDataGridView.DataSource = (new CCJ2EntitiesMILK()).原料検査ワークシート.ToList();
             CCJ2EntitiesMILK ccj2Entities_MILK = new CCJ2EntitiesMILK();
             //ccj2Entities = Select ref from

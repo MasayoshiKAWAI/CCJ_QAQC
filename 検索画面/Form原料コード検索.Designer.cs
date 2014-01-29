@@ -34,16 +34,16 @@
             this.textBox原料コード = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.材料コードDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.材料名称DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.名称DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.材料マスタBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.元番製品コード = new CCJ_QAQC.元番製品コード();
+            this.dataSet元番材料コード = new CCJ_QAQC.DataSet元番材料コード();
             this.buttonClear = new System.Windows.Forms.Button();
-            this.材料マスタTableAdapter = new CCJ_QAQC.元番製品コードTableAdapters.材料マスタTableAdapter();
+            this.材料マスタTableAdapter = new CCJ_QAQC.DataSet元番材料コードTableAdapters.材料マスタTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.材料マスタBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.元番製品コード)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet元番材料コード)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCloseForm
@@ -100,9 +100,9 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.材料コードDataGridViewTextBoxColumn,
-            this.材料名称DataGridViewTextBoxColumn,
-            this.名称DataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
             this.dataGridView1.DataSource = this.材料マスタBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 95);
             this.dataGridView1.Name = "dataGridView1";
@@ -112,38 +112,15 @@
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
-            // 材料コードDataGridViewTextBoxColumn
-            // 
-            this.材料コードDataGridViewTextBoxColumn.DataPropertyName = "材料コード";
-            this.材料コードDataGridViewTextBoxColumn.HeaderText = "材料コード";
-            this.材料コードDataGridViewTextBoxColumn.Name = "材料コードDataGridViewTextBoxColumn";
-            this.材料コードDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // 材料名称DataGridViewTextBoxColumn
-            // 
-            this.材料名称DataGridViewTextBoxColumn.DataPropertyName = "材料名称";
-            this.材料名称DataGridViewTextBoxColumn.HeaderText = "材料名称";
-            this.材料名称DataGridViewTextBoxColumn.Name = "材料名称DataGridViewTextBoxColumn";
-            this.材料名称DataGridViewTextBoxColumn.ReadOnly = true;
-            this.材料名称DataGridViewTextBoxColumn.Width = 300;
-            // 
-            // 名称DataGridViewTextBoxColumn
-            // 
-            this.名称DataGridViewTextBoxColumn.DataPropertyName = "名称";
-            this.名称DataGridViewTextBoxColumn.HeaderText = "納入元名称";
-            this.名称DataGridViewTextBoxColumn.Name = "名称DataGridViewTextBoxColumn";
-            this.名称DataGridViewTextBoxColumn.ReadOnly = true;
-            this.名称DataGridViewTextBoxColumn.Width = 150;
-            // 
             // 材料マスタBindingSource
             // 
             this.材料マスタBindingSource.DataMember = "材料マスタ";
-            this.材料マスタBindingSource.DataSource = this.元番製品コード;
+            this.材料マスタBindingSource.DataSource = this.dataSet元番材料コード;
             // 
-            // 元番製品コード
+            // dataSet元番材料コード
             // 
-            this.元番製品コード.DataSetName = "元番製品コード";
-            this.元番製品コード.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataSet元番材料コード.DataSetName = "DataSet元番材料コード";
+            this.dataSet元番材料コード.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonClear
             // 
@@ -158,6 +135,29 @@
             // 材料マスタTableAdapter
             // 
             this.材料マスタTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "材料コード";
+            this.dataGridViewTextBoxColumn1.HeaderText = "材料コード";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "材料名称";
+            this.dataGridViewTextBoxColumn2.HeaderText = "材料名称";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 400;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "名称";
+            this.dataGridViewTextBoxColumn3.HeaderText = "メーカー名称";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 200;
             // 
             // Form原料コード検索
             // 
@@ -182,7 +182,7 @@
             this.Controls.SetChildIndex(this.buttonClear, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.材料マスタBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.元番製品コード)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet元番材料コード)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,17 +191,22 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private 元番製品コード 元番製品コード;
+        //private 元番製品コード 元番製品コード;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.TextBox textBox原料コード;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonClear;
+        ////private 元番製品コードTableAdapters.材料マスタTableAdapter 材料マスタTableAdapter;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn 材料コードDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn 材料名称DataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn 名称DataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource 材料マスタBindingSource;
-        private 元番製品コードTableAdapters.材料マスタTableAdapter 材料マスタTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 材料コードDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 材料名称DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 名称DataGridViewTextBoxColumn;
+        private DataSet元番材料コード dataSet元番材料コード;
+        private DataSet元番材料コードTableAdapters.材料マスタTableAdapter 材料マスタTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
 
     }
 }

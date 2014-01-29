@@ -59,46 +59,25 @@ namespace CCJ_QAQC.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HP8100;Initial Catalog=CCJ2;Integrated Security=True")]
         public string ConnectionStringHP8100 {
             get {
                 return ((string)(this["ConnectionStringHP8100"]));
             }
+            set {
+                this["ConnectionStringHP8100"] = value;
+            }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MILK;Initial Catalog=CCJ2;Persist Security Info=True;User ID=Prescrip" +
-            "Sys")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HP8100;Initial Catalog=CCJ2;Integrated Security=True")]
         public string CCJQAQCConnectionString {
             get {
                 return ((string)(this["CCJQAQCConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MILK;Initial Catalog=CCJ2;Persist Security Info=True;User ID=Prescrip" +
-            "Sys")]
-        public string ConnectionStringMILK {
-            get {
-                return ((string)(this["ConnectionStringMILK"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MILK;Initial Catalog=CCJ2;Persist Security Info=True;User ID=Prescrip" +
-            "Sys")]
-        public string TxDataConnectionString {
-            get {
-                return ((string)(this["TxDataConnectionString"]));
             }
         }
     }

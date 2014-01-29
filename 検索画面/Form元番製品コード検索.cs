@@ -43,9 +43,9 @@ namespace CCJ_QAQC
         {
             this.dataGridView1.DataSource = null;
             this.dataGridView1.ClearSelection();
-            this.元番製品コード.顧客サンプル台帳.Clear();
-            this.元番製品コード.開発処方箋台帳.Clear();
-            this.元番製品コード.処方箋.Clear();
+            //this.元番製品コード.顧客サンプル台帳.Clear();
+            //this.元番製品コード.開発処方箋台帳.Clear();
+            //this.元番製品コード.処方箋.Clear();
             
             if (!string.IsNullOrWhiteSpace(this.textBox製品コード.Text) && !string.IsNullOrWhiteSpace(this.textBox元番.Text))
             {
@@ -55,12 +55,12 @@ namespace CCJ_QAQC
                     this.radioButton処方箋台帳を検索.Checked = true;
                 }
                 this.dataGridView1.DataSource = this.処方箋BindingSource;
-                this.処方箋TableAdapter.FillBy製品コードと元番(this.元番製品コード.処方箋, this.textBox製品コード.Text, this.textBox元番.Text);
+                //this.処方箋TableAdapter.FillBy製品コードと元番(this.元番製品コード.処方箋, this.textBox製品コード.Text, this.textBox元番.Text);
             }
             else if (!string.IsNullOrWhiteSpace(this.textBox製品コード.Text) && string.IsNullOrWhiteSpace(this.textBox元番.Text))
             {
                 this.dataGridView1.DataSource = this.処方箋BindingSource;
-                this.処方箋TableAdapter.FillBy製品コード(this.元番製品コード.処方箋, this.textBox製品コード.Text);//.Fill(this.元番製品コード.顧客サンプル台帳);
+                //this.処方箋TableAdapter.FillBy製品コード(this.元番製品コード.処方箋, this.textBox製品コード.Text);//.Fill(this.元番製品コード.顧客サンプル台帳);
             }
             else if(string.IsNullOrWhiteSpace(this.textBox製品コード.Text) && !string.IsNullOrWhiteSpace(this.textBox元番.Text))
             {
@@ -68,12 +68,12 @@ namespace CCJ_QAQC
                 if (this.radioButton処方箋台帳を検索.Checked)
                 {
                     this.dataGridView1.DataSource = this.処方箋BindingSource;
-                    this.処方箋TableAdapter.FillBy元番(this.元番製品コード.処方箋, this.textBox元番.Text);
+                    //this.処方箋TableAdapter.FillBy元番(this.元番製品コード.処方箋, this.textBox元番.Text);
                 }
                 else if (this.radioButton開発処方箋台帳を検索.Checked)
                 {
                     this.dataGridView1.DataSource = this.開発処方箋台帳BindingSource;
-                    this.開発処方箋台帳TableAdapter.FillBy処方番号(this.元番製品コード.開発処方箋台帳, this.textBox元番.Text);
+                    //this.開発処方箋台帳TableAdapter.FillBy処方番号(this.元番製品コード.開発処方箋台帳, this.textBox元番.Text);
                 }
             }
             else

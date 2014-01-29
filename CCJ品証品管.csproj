@@ -101,6 +101,17 @@
     <None Include="CCJ2DataSetHP8100.xss">
       <DependentUpon>CCJ2DataSetHP8100.xsd</DependentUpon>
     </None>
+    <None Include="DataSet元番材料コード.xsc">
+      <DependentUpon>DataSet元番材料コード.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet元番材料コード.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet元番材料コード.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet元番材料コード.xss">
+      <DependentUpon>DataSet元番材料コード.xsd</DependentUpon>
+    </None>
     <None Include="DataSet検査ワークシート.xsc">
       <DependentUpon>DataSet検査ワークシート.xsd</DependentUpon>
     </None>
@@ -131,23 +142,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="元番製品コード.xsc">
-      <DependentUpon>元番製品コード.xsd</DependentUpon>
-    </None>
-    <None Include="元番製品コード.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>元番製品コード.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="元番製品コード.xss">
-      <DependentUpon>元番製品コード.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CCJ2DataSetHP8100.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CCJ2DataSetHP8100.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet元番材料コード.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet元番材料コード.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSet検査ワークシート.cs">
       <DependentUpon>DataSet検査ワークシート.xsd</DependentUpon>
@@ -217,11 +222,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="元番製品コード.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>元番製品コード.xsd</DependentUpon>
     </Compile>
     <Compile Include="原料検査ワークシート\Form原料検査WS検索.cs">
       <SubType>Form</SubType>

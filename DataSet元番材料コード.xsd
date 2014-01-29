@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet元番材料コード" targetNamespace="http://tempuri.org/DataSet元番材料コード.xsd" xmlns:mstns="http://tempuri.org/DataSet元番材料コード.xsd" xmlns="http://tempuri.org/DataSet元番材料コード.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CCJQAQCConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CCJQAQCConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CCJ_QAQC.Properties.Settings.GlobalReference.Default.CCJQAQCConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="材料マスタTableAdapter" GeneratorDataComponentClassName="材料マスタTableAdapter" Name="材料マスタ" UserDataComponentName="材料マスタTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CCJQAQCConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT            材料マスタ.材料コード, 材料マスタ.材料名称, 仕入先マスタ.名称
+FROM              材料マスタ INNER JOIN
+                        仕入先マスタ ON 材料マスタ.仕入先コード = 仕入先マスタ.仕入先コード</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="材料コード" DataSetColumn="材料コード" />
+              <Mapping SourceColumn="材料名称" DataSetColumn="材料名称" />
+              <Mapping SourceColumn="名称" DataSetColumn="名称" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet元番材料コード" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet元番材料コード" msprop:Generator_UserDSName="DataSet元番材料コード">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="材料マスタ" msprop:Generator_TableClassName="材料マスタDataTable" msprop:Generator_TableVarName="table材料マスタ" msprop:Generator_TablePropName="材料マスタ" msprop:Generator_RowDeletingName="材料マスタRowDeleting" msprop:Generator_RowChangingName="材料マスタRowChanging" msprop:Generator_RowEvHandlerName="材料マスタRowChangeEventHandler" msprop:Generator_RowDeletedName="材料マスタRowDeleted" msprop:Generator_UserTableName="材料マスタ" msprop:Generator_RowChangedName="材料マスタRowChanged" msprop:Generator_RowEvArgName="材料マスタRowChangeEvent" msprop:Generator_RowClassName="材料マスタRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="材料コード" msprop:Generator_ColumnVarNameInTable="column材料コード" msprop:Generator_ColumnPropNameInRow="材料コード" msprop:Generator_ColumnPropNameInTable="材料コードColumn" msprop:Generator_UserColumnName="材料コード">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="材料名称" msprop:Generator_ColumnVarNameInTable="column材料名称" msprop:Generator_ColumnPropNameInRow="材料名称" msprop:Generator_ColumnPropNameInTable="材料名称Column" msprop:Generator_UserColumnName="材料名称" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="名称" msprop:Generator_ColumnVarNameInTable="column名称" msprop:Generator_ColumnPropNameInRow="名称" msprop:Generator_ColumnPropNameInTable="名称Column" msprop:Generator_UserColumnName="名称" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:材料マスタ" />
+      <xs:field xpath="mstns:材料コード" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

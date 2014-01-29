@@ -63,10 +63,10 @@
             System.Windows.Forms.Label 更新IDLabel;
             this.原料検査ワークシートDataGridView = new System.Windows.Forms.DataGridView();
             this.原料検査ワークシートBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.元番製品コード = new CCJ_QAQC.元番製品コード();
+            //this.元番製品コード = new CCJ_QAQC.元番製品コード();
             this.材料マスタBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.材料マスタTableAdapter = new CCJ_QAQC.元番製品コードTableAdapters.材料マスタTableAdapter();
-            this.tableAdapterManager = new CCJ_QAQC.元番製品コードTableAdapters.TableAdapterManager();
+            //this.材料マスタTableAdapter = new CCJ_QAQC.元番製品コードTableAdapters.材料マスタTableAdapter();
+            //this.tableAdapterManager = new CCJ_QAQC.元番製品コードTableAdapters.TableAdapterManager();
             this.材料コードTextBox = new System.Windows.Forms.TextBox();
             this.材料名称TextBox = new System.Windows.Forms.TextBox();
             this.名称TextBox = new System.Windows.Forms.TextBox();
@@ -150,7 +150,7 @@
             更新IDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.原料検査ワークシートDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.原料検査ワークシートBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.元番製品コード)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.元番製品コード)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.材料マスタBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet検査ワークシート)).BeginInit();
             this.SuspendLayout();
@@ -484,25 +484,25 @@
             this.原料検査ワークシートBindingSource.DataMember = "原料検査ワークシート";
             this.原料検査ワークシートBindingSource.DataSource = this.dataSet検査ワークシート;
             // 
-            // 元番製品コード
-            // 
-            this.元番製品コード.DataSetName = "元番製品コード";
-            this.元番製品コード.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // 材料マスタBindingSource
-            // 
-            this.材料マスタBindingSource.DataMember = "材料マスタ";
-            this.材料マスタBindingSource.DataSource = this.元番製品コード;
-            // 
-            // 材料マスタTableAdapter
-            // 
-            this.材料マスタTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.UpdateOrder = CCJ_QAQC.元番製品コードTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            //// 元番製品コード
+            //// 
+            //this.元番製品コード.DataSetName = "元番製品コード";
+            //this.元番製品コード.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //// 
+            //// 材料マスタBindingSource
+            //// 
+            //this.材料マスタBindingSource.DataMember = "材料マスタ";
+            //this.材料マスタBindingSource.DataSource = this.元番製品コード;
+            //// 
+            //// 材料マスタTableAdapter
+            //// 
+            //this.材料マスタTableAdapter.ClearBeforeFill = true;
+            //// 
+            //// tableAdapterManager
+            //// 
+            //this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            //this.tableAdapterManager.Connection = null;
+            //this.tableAdapterManager.UpdateOrder = CCJ_QAQC.元番製品コードTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // 材料コードTextBox
             // 
@@ -1016,7 +1016,7 @@
             this.Controls.SetChildIndex(材料コードLabel, 0);
             ((System.ComponentModel.ISupportInitialize)(this.原料検査ワークシートDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.原料検査ワークシートBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.元番製品コード)).EndInit();
+            ///((System.ComponentModel.ISupportInitialize)(this.元番製品コード)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.材料マスタBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet検査ワークシート)).EndInit();
             this.ResumeLayout(false);
@@ -1028,10 +1028,10 @@
 
         private System.Windows.Forms.BindingSource 原料検査ワークシートBindingSource;
         private System.Windows.Forms.DataGridView 原料検査ワークシートDataGridView;
-        private 元番製品コード 元番製品コード;
+        //private 元番製品コード 元番製品コード;
         private System.Windows.Forms.BindingSource 材料マスタBindingSource;
-        private 元番製品コードTableAdapters.材料マスタTableAdapter 材料マスタTableAdapter;
-        private 元番製品コードTableAdapters.TableAdapterManager tableAdapterManager;
+        //private 元番製品コードTableAdapters.材料マスタTableAdapter 材料マスタTableAdapter;
+        //private 元番製品コードTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox 材料コードTextBox;
         private System.Windows.Forms.TextBox 材料名称TextBox;
         private System.Windows.Forms.TextBox 名称TextBox;

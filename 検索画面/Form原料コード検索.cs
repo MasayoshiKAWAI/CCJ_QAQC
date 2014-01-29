@@ -29,6 +29,8 @@ namespace CCJ_QAQC
 
         private void Form元番製品コード検索_Load(object sender, EventArgs e)
         {
+            // TODO: このコード行はデータを 'dataSet元番材料コード.材料マスタ' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.材料マスタTableAdapter.Fill(this.dataSet元番材料コード.材料マスタ);
             // TODO: このコード行はデータを '元番製品コード.材料マスタ' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             //this.材料マスタTableAdapter.Fill(this.元番製品コード.材料マスタ);
             // TODO: このコード行はデータを '元番製品コード.開発処方箋台帳' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
@@ -53,13 +55,13 @@ namespace CCJ_QAQC
         {
             this.dataGridView1.DataSource = null;
             this.dataGridView1.ClearSelection();
-            this.元番製品コード.顧客サンプル台帳.Clear();
-            this.元番製品コード.開発処方箋台帳.Clear();
+            //this.元番製品コード.顧客サンプル台帳.Clear();
+            //this.元番製品コード.開発処方箋台帳.Clear();
             
             if (!string.IsNullOrWhiteSpace(this.textBox原料コード.Text))
             {
                 this.dataGridView1.DataSource = this.材料マスタBindingSource;
-                this.材料マスタTableAdapter.FillBy材料コード(this.元番製品コード.材料マスタ, this.textBox原料コード.Text);
+                //this.材料マスタTableAdapter.FillBy材料コード(this.元番製品コード.材料マスタ, this.textBox原料コード.Text);
             }
             else
             {
