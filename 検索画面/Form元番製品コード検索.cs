@@ -34,7 +34,7 @@ namespace CCJ_QAQC
         private void Form元番製品コード検索_Load(object sender, EventArgs e)
         {
             // TODO: このコード行はデータを 'dataSet元番材料コード.処方箋' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.処方箋TableAdapter.Fill(this.dataSet元番材料コード.処方箋);
+            //this.処方箋TableAdapter.Fill(this.dataSet元番材料コード.処方箋);
             // TODO: このコード行はデータを '元番製品コード.処方箋' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             //this.処方箋TableAdapter.Fill(this.元番製品コード.処方箋);
             // TODO: このコード行はデータを '元番製品コード.開発処方箋台帳' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
@@ -43,20 +43,16 @@ namespace CCJ_QAQC
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            this.dataGridView1.DataSource = null;
-            this.dataGridView1.ClearSelection();
-            //this.元番製品コード.顧客サンプル台帳.Clear();
-            //this.元番製品コード.開発処方箋台帳.Clear();
-            //this.元番製品コード.処方箋.Clear();
+            //this.dataGridView1.DataSource = this.処方箋BindingSource;
+            //this.dataGridView1.DataMember = this.処方箋BindingSource
+            //this.dataGridView1.ClearSelection();
             
             if (!string.IsNullOrWhiteSpace(this.textBox製品コード.Text) && !string.IsNullOrWhiteSpace(this.textBox元番.Text))
             {
-                this.dataGridView1.DataSource = this.処方箋BindingSource;
-                //this.処方箋TableAdapter.FillBy製品コードと元番(this.元番製品コード.処方箋, this.textBox製品コード.Text, this.textBox元番.Text);
             }
             else if (!string.IsNullOrWhiteSpace(this.textBox製品コード.Text) && string.IsNullOrWhiteSpace(this.textBox元番.Text))
             {
-                this.dataGridView1.DataSource = this.処方箋BindingSource;
+                this.処方箋TableAdapter.FillBy製品コード(this.dataSet元番材料コード.処方箋,this.textBox製品コード.Text);
             }
             else if(string.IsNullOrWhiteSpace(this.textBox製品コード.Text) && !string.IsNullOrWhiteSpace(this.textBox元番.Text))
             {

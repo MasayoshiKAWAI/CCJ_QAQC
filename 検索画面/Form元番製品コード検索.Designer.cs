@@ -40,6 +40,9 @@
             this.処方箋BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet元番材料コード = new CCJ_QAQC.DataSet元番材料コード();
             this.処方箋TableAdapter = new CCJ_QAQC.DataSet元番材料コードTableAdapters.処方箋TableAdapter();
+            this.製品管理番号DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.処方箋番号DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.製品名DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.処方箋BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet元番材料コード)).BeginInit();
@@ -112,7 +115,13 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.製品管理番号DataGridViewTextBoxColumn,
+            this.処方箋番号DataGridViewTextBoxColumn,
+            this.製品名DataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.処方箋BindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 136);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -145,6 +154,27 @@
             // 処方箋TableAdapter
             // 
             this.処方箋TableAdapter.ClearBeforeFill = true;
+            // 
+            // 製品管理番号DataGridViewTextBoxColumn
+            // 
+            this.製品管理番号DataGridViewTextBoxColumn.DataPropertyName = "製品管理番号";
+            this.製品管理番号DataGridViewTextBoxColumn.HeaderText = "製品管理番号";
+            this.製品管理番号DataGridViewTextBoxColumn.Name = "製品管理番号DataGridViewTextBoxColumn";
+            this.製品管理番号DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // 処方箋番号DataGridViewTextBoxColumn
+            // 
+            this.処方箋番号DataGridViewTextBoxColumn.DataPropertyName = "処方箋番号";
+            this.処方箋番号DataGridViewTextBoxColumn.HeaderText = "処方箋番号";
+            this.処方箋番号DataGridViewTextBoxColumn.Name = "処方箋番号DataGridViewTextBoxColumn";
+            this.処方箋番号DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // 製品名DataGridViewTextBoxColumn
+            // 
+            this.製品名DataGridViewTextBoxColumn.DataPropertyName = "製品名";
+            this.製品名DataGridViewTextBoxColumn.HeaderText = "製品名";
+            this.製品名DataGridViewTextBoxColumn.Name = "製品名DataGridViewTextBoxColumn";
+            this.製品名DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form元番製品コード検索
             // 
@@ -194,6 +224,9 @@
         private System.Windows.Forms.BindingSource 処方箋BindingSource;
         private DataSet元番材料コード dataSet元番材料コード;
         private DataSet元番材料コードTableAdapters.処方箋TableAdapter 処方箋TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 製品管理番号DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 処方箋番号DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 製品名DataGridViewTextBoxColumn;
         //private 元番製品コードTableAdapters.処方箋TableAdapter 処方箋TableAdapter;
 
     }
